@@ -69,17 +69,12 @@
         </el-pagination>
       </center>
     </div>
-    <v-footer></v-footer>
   </div>
 </template>
 
 <script>
-  import vFooter from '../common/Footer.vue';
   export default {
       name: "index",
-      components: {
-          vFooter
-        },
       data() {
         return {
           ishow: false,

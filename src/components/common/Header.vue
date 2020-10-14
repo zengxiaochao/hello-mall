@@ -1,17 +1,31 @@
 <template>
   <div class="header">
-    <!-- 折叠按钮 -->
-    <div class="collapse-btn" @click="collapseChage">
-      <i v-if="!collapse" class="el-icon-s-fold"></i>
-      <i v-else class="el-icon-s-unfold"></i>
-    </div>
-    <div class="logo">HelloFront</div>
+    <!-- 前往主页按钮 -->
+    <router-link to="/" style="color: #F2F8FE">
+      <div class="collapse-btn">
+        <i class="el-icon-s-home"></i>
+      </div>
+      <div class="logo">HelloMall</div>
+    </router-link>
+
     <div class="header-right">
       <div class="header-user-con">
-        <!-- 全屏显示 -->
-        <div class="btn-fullscreen" @click="handleFullScreen">
-          <el-tooltip effect="dark" :content="fullscreen?`取消全屏`:`全屏`" placement="bottom">
-            <i class="el-icon-rank"></i>
+<!--        &lt;!&ndash; 全屏显示 &ndash;&gt;-->
+<!--        <div class="btn-fullscreen" @click="handleFullScreen">-->
+<!--          <el-tooltip effect="dark" :content="fullscreen?`取消全屏`:`全屏`" placement="bottom">-->
+<!--            <i class="el-icon-rank"></i>-->
+<!--          </el-tooltip>-->
+<!--        </div>-->
+        <!-- 我的收藏 -->
+        <div class="btn-bell">
+          <el-tooltip effect="dark" content="我的收藏" placement="bottom">
+            <i class="el-icon-star-on"></i>
+          </el-tooltip>
+        </div>
+        <!-- 我的购物车 -->
+        <div class="btn-bell">
+          <el-tooltip effect="dark" content="我的购物车" placement="bottom">
+            <i class="el-icon-shopping-cart-2"></i>
           </el-tooltip>
         </div>
         <!-- 消息中心 -->
@@ -39,7 +53,6 @@
                         <i class="el-icon-caret-bottom"></i>
                     </span>
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item divided command="loginout">购物车</el-dropdown-item>
             <el-dropdown-item divided command="loginout">我的订单</el-dropdown-item>
             <el-dropdown-item divided command="loginout">我的信息</el-dropdown-item>
             <el-dropdown-item divided command="loginout">退出登录</el-dropdown-item>

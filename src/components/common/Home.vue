@@ -3,6 +3,8 @@
         <v-head></v-head>
             <div class="content">
                 <router-view></router-view>
+              <v-footer></v-footer>
+
             </div>
     </div>
 </template>
