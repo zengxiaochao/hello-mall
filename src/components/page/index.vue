@@ -41,7 +41,7 @@
                   <div class="ribbon">
                     <!--鼠标移入移出事件-->
                     <div class="handleDialog" v-if="ishow && index==current">
-                      <el-button type="success" style="margin-left:25%;margin-top: 70%;" size="medium" @click="goGoodsDesc(item)">查看详情</el-button>
+                      <el-button type="success" style="margin-left:25%;margin-top: 70%;" size="medium" @click="goGoodsDesc(item.id)">查看详情</el-button>
                       <el-button type="warning" icon="el-icon-star-off" circle size="medium"></el-button>
                     </div>
                     <img :src="item.img" style="height: 100%;width: 100%">
