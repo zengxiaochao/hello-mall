@@ -16,16 +16,20 @@
 <!--            <i class="el-icon-rank"></i>-->
 <!--          </el-tooltip>-->
 <!--        </div>-->
-        <!-- 我的收藏 -->
-        <div class="btn-bell">
-          <el-tooltip effect="dark" content="我的收藏" placement="bottom">
-            <i class="el-icon-star-on"></i>
-          </el-tooltip>
-        </div>
         <!-- 我的购物车 -->
         <div class="btn-bell">
           <el-tooltip effect="dark" content="我的购物车" placement="bottom">
-            <i class="el-icon-shopping-cart-2"></i>
+            <router-link to="/carts">
+              <i class="el-icon-shopping-cart-2"  style="color: #F2F8FE;"></i>
+            </router-link>
+          </el-tooltip>
+        </div>
+        <!-- 我的收藏 -->
+        <div class="btn-bell">
+          <el-tooltip effect="dark" content="我的收藏" placement="bottom">
+            <router-link to="/collection">
+              <i class="el-icon-star-on" style="color: #F2F8FE;"></i>
+            </router-link>
           </el-tooltip>
         </div>
         <!-- 消息中心 -->
@@ -35,7 +39,7 @@
             :content="message?`有${message}条未读消息`:`消息中心`"
             placement="bottom"
           >
-            <router-link to="/tabs">
+            <router-link to="/carts">
               <i class="el-icon-bell"></i>
             </router-link>
           </el-tooltip>
@@ -53,9 +57,10 @@
                         <i class="el-icon-caret-bottom"></i>
                     </span>
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item divided command="loginout">我的订单</el-dropdown-item>
-            <el-dropdown-item divided command="loginout">我的信息</el-dropdown-item>
-            <el-dropdown-item divided command="loginout">退出登录</el-dropdown-item>
+            <router-link to="/myOrders"><el-dropdown-item divided command="loginout">我的订单</el-dropdown-item> </router-link>
+            <router-link to="/userInfo"><el-dropdown-item divided command="loginout">我的信息</el-dropdown-item> </router-link>
+            <a href=""><el-dropdown-item divided command="loginout">Git仓库</el-dropdown-item> </a>
+            <el-dropdown-item>退出登录</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
       </div>

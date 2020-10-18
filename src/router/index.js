@@ -26,6 +26,31 @@ export default new Router({
           meta: { title: '商品详情' }
         },
         {
+          path: '/carts',
+          component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/carts.vue'),
+          meta: { title: '购物车' }
+        },
+        {
+          path: '/collection',
+          component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/collection.vue'),
+          meta: { title: '我的收藏' }
+        },
+        {
+          path: '/myOrders',
+          component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/myOrders.vue'),
+          meta: { title: '我的订单' }
+        },
+        {
+          path: '/makeSureOrder',
+          component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/makeSureOrder.vue'),
+          meta: { title: '确认订单' }
+        },
+        {
+          path: '/userInfo',
+          component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/userInfo.vue'),
+          meta: { title: '个人信息' }
+        },
+        {
           path: '/404',
           component: () => import(/* webpackChunkName: "404" */ '../components/page/404.vue'),
           meta: { title: '404' }
@@ -40,8 +65,13 @@ export default new Router({
     },
     {
       path: '/login',
-      component: () => import(/* webpackChunkName: "login" */ '../components/page/Login.vue'),
+      component: () => import(/* webpackChunkName: "login" */ '../components/page/login.vue'),
       meta: { title: '登录' }
+    },
+    {
+      path: '/register',
+      component: () => import(/* webpackChunkName: "login" */ '../components/page/register.vue'),
+      meta: { title: '注册' }
     },
     // {
     //   path: '/register',

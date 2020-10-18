@@ -1,5 +1,5 @@
 <template >
-  <div>
+  <div style="float: left;width: 100%;">
     <div class="goodsBox">
       <div class="goodsBox-img">
         <el-image
@@ -32,7 +32,7 @@
       </div>
     </div>
 <!--    猜你喜欢-->
-    <div class="goodsLikes" id="goodsLikes" style="text-align: center;">
+    <div class="goodsLikes" id="goodsLikes" style="text-align: center;float: left;width: 100%;">
       <hr />
       <h1 style="color: #777777">猜你喜欢</h1>
       <div style="float: left;width: 23%;height: 1px;"></div>
@@ -53,7 +53,7 @@
       <br><br>
     </div>
 <!--    详情图片-->
-    <div class="goodsDescImg" id="goodsDescImg" style="text-align: center;margin-top: 300px;">
+    <div class="goodsDescImg" id="goodsDescImg" style="text-align: center;margin-top: 300px;float: left;width: 100%;">
       <hr />
       <h1 style="color: #777777">商品详情</h1><br><br><br>
       <el-image v-for="url in srcList" :key="url" :src="url" lazy></el-image>
@@ -77,6 +77,7 @@
             //隐形窗口
             ishow: false,
             current: 0,
+
             //按钮点击限制
             add1_can_press : true,
             add2_can_press : true,
@@ -110,6 +111,7 @@
         methods: {
           //数据更新
           getdate() {
+
 
           },
           //前往商品详情页
