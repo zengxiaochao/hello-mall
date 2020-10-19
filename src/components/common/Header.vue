@@ -37,17 +37,15 @@
           <el-tooltip
             effect="dark"
             :content="message?`有${message}条未读消息`:`消息中心`"
-            placement="bottom"
-          >
-            <router-link to="/carts">
-              <i class="el-icon-bell"></i>
-            </router-link>
+            placement="bottom">
+            <i class="el-icon-bell" @click="drawer = true"></i>
+
           </el-tooltip>
           <span class="btn-bell-badge" v-if="message"></span>
         </div>
         <!-- 用户头像 -->
         <div class="user-avator">
-          <img src="../../assets/img/img.jpg" />
+          <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2057588226,2402156864&fm=11&gp=0.jpg" />
         </div>
 
         <!-- 用户名下拉菜单 -->
@@ -57,14 +55,37 @@
                         <i class="el-icon-caret-bottom"></i>
                     </span>
           <el-dropdown-menu slot="dropdown">
-            <router-link to="/myOrders"><el-dropdown-item divided command="loginout">我的订单</el-dropdown-item> </router-link>
-            <router-link to="/userInfo"><el-dropdown-item divided command="loginout">我的信息</el-dropdown-item> </router-link>
+            <router-link to="/myOrders"><el-dropdown-item>我的订单</el-dropdown-item> </router-link>
+            <router-link to="/userInfo"><el-dropdown-item>我的信息</el-dropdown-item> </router-link>
+            <router-link to="/addressMag"><el-dropdown-item>地址管理</el-dropdown-item> </router-link>
             <a href=""><el-dropdown-item divided command="loginout">Git仓库</el-dropdown-item> </a>
             <el-dropdown-item>退出登录</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
       </div>
     </div>
+    <el-drawer
+      title="我是标题"
+      style="color:#000;"
+      :visible.sync="drawer"
+      :with-header="false">
+      <el-card class="box-card" style="margin-top: 20px;text-align: center;">
+        <div slot="header" class="clearfix">
+          <span style="font-size: 22px;">订单已发货</span>
+          <el-button style="float: right; padding: 3px 0" type="text">已读</el-button>
+        </div>
+        <span style="font-size: 18px;">asd</span>
+      </el-card>
+
+      <el-card class="box-card" style="margin-top: 20px;text-align: center;">
+        <div slot="header" class="clearfix">
+          <span style="font-size: 22px;">订单已发货</span>
+          <el-button style="float: right; padding: 3px 0" type="text">已读</el-button>
+        </div>
+        <span style="font-size: 18px;">asd</span>
+      </el-card>
+
+    </el-drawer>
   </div>
 </template>
 <script>
@@ -74,7 +95,8 @@
         collapse: false,
         fullscreen: false,
         name: 'linxin',
-        message: 2
+        message: 2,
+        drawer: false,
       };
     },
     computed: {
@@ -160,11 +182,6 @@
     height: 70px;
     align-items: center;
   }
-  .btn-fullscreen {
-    transform: rotate(45deg);
-    margin-right: 5px;
-    font-size: 24px;
-  }
   .btn-bell,
   .btn-fullscreen {
     position: relative;
@@ -203,7 +220,5 @@
     color: #fff;
     cursor: pointer;
   }
-  .el-dropdown-menu__item {
-    text-align: center;
-  }
+
 </style>

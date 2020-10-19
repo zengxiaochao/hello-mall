@@ -77,7 +77,9 @@
               <span>共<span class="spanText">{{changeNumPri(1)}}</span>件商品</span>
               <span>总价<span class="spanText">&yen;{{changeNumPri(2)}}</span></span>
               <span>
-                <el-button >全部结算</el-button>
+                <router-link to="/makeSureOrder">
+                  <el-button>全部结算</el-button>
+                </router-link>
               </span>
           </span>
         </ul>
@@ -122,12 +124,10 @@
             //选中列表
             multipleSelection : [],
             chooseList : [],
-            allPrices : 0,
-            allNums : 0,
           }
         },
         created() {
-          this.initChoose();
+
         },
         methods:{
           canSelect(row) {
@@ -156,35 +156,15 @@
                   allNumss += this.tableData[i].nums;
                 }
             }
-            this.allPrices = parseFloat(allPricess).toFixed(2);
-            this.allNums = allNumss;
             if(which=='2'){
               return parseFloat(allPricess).toFixed(2);
             }else{
               return allNumss;
             }
           },
-          initChoose(){
-            // this.$nextTick(() => {
-              //默认全选
-              // this.$refs.multipleTable.toggleAllSelection();
-            // });
-          },
           // 多选操作
           handleSelectionChange(val) {
-            // this.multipleSelection = val;
-            // this.tableData[0].nums ++;
-            const length = val.length;
-            //总价
-            //全部数量
-            let allPricess = 0.0;
-            let allNumss = 0;
-            for (let i = 0; i < length; i++) {
-              allPricess += val[i].nums*val[i].price;
-              allNumss += val[i].nums;
-            }
-            this.allPrices = parseFloat(allPricess).toFixed(2);
-            this.allNums = allNumss;
+            this.multipleSelection = val;
           },
       }
     }
