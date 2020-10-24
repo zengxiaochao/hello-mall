@@ -48,18 +48,6 @@
           status:"1",
           img:"http://05imgmini.eastday.com/mobile/20200507/20200507135939_9e1683aae3ee6fe14f853d422cdc32be_2.jpeg",
           nums:1
-        },{
-          name: '华为P40 Pro',
-          price:5988.00,
-          status:"1",
-          img:"http://05imgmini.eastday.com/mobile/20200507/20200507135939_9e1683aae3ee6fe14f853d422cdc32be_2.jpeg",
-          nums:1
-        }, {
-          name: 'iPhone 11 Pro Max',
-          price:6338.90,
-          status:"2",
-          img:"https://img12.360buyimg.com/n1/jfs/t1/68636/31/9824/169738/5d780ed7E97e88252/7b62380330636738.jpg",
-          nums:2
         }, {
           name: 'iPhone 11 Pro Max',
           price:6338.90,

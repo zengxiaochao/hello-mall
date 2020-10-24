@@ -1,5 +1,5 @@
 <template >
-  <div style="float: left;width: 100%;">
+  <div style="">
     <div class="goodsBox">
       <div class="goodsBox-img">
         <el-image
@@ -19,8 +19,8 @@
         </div>
         <div class="goodsBox-btn">
          <br><br>
-          <h1>华为P40</h1><br>
-          <p>每一个感动，每一份精彩都不应被遗忘。HUAWEI P40 系列，赋予画幅新生，定义探索深远，用超感知影像的力量，让记忆历久弥新，让温暖与美好清晰留存。</p><br><br><br><br><br>
+          <h1>华为 HUAWEI Mate 40 Pro</h1><br>
+          <p>每一个感动，每一份精彩都不应被遗忘。华为Mate 40 系列，赋予画幅新生，定义探索深远，用超感知影像的力量，让记忆历久弥新，让温暖与美好清晰留存。</p><br><br><br><br><br>
           <h2><span style="color: #777777">售价&ensp;</span><span style="color: #e4393c;font-family: simsun">&yen;<span></span>{{money}}</span></h2>
           <br><br>
           <h4 style="position: relative;left: -35%;"><span style="color: #777777">库存&ensp;</span><span style="color: #4D6530;font-family: simsun"><span></span>{{sum}}</span></h4>
@@ -32,11 +32,10 @@
       </div>
     </div>
 <!--    猜你喜欢-->
-    <div class="goodsLikes" id="goodsLikes" style="text-align: center;float: left;width: 100%;">
+    <div class="goodsLikes" id="goodsLikes" style="text-align: center;">
       <hr />
       <h1 style="color: #777777">猜你喜欢</h1>
-      <div style="float: left;width: 23%;height: 1px;"></div>
-      <div style="float: left;width: 54%;">
+      <div style="margin-left: 23%">
         <div class="card" v-for="(item, index) in goodsLikesList" :key="item.id" v-on:mouseenter="showDialog(index)" v-on:mouseleave="hideDialog(index)">
           <div class="ribbon">
             <!--鼠标移入移出事件-->
@@ -49,14 +48,14 @@
           </div>
         </div>
       </div>
-      <div style="float: left;width: 23%;height: 1px;"></div>
+<!--      <div style="float: left;width: 23%;height: 1px;"></div>-->
       <br><br>
     </div>
 <!--    详情图片-->
-    <div class="goodsDescImg" id="goodsDescImg" style="text-align: center;margin-top: 300px;float: left;width: 100%;">
+    <div class="goodsDescImg" id="goodsDescImg" style="text-align: center;margin-top: 300px">
       <hr />
       <h1 style="color: #777777">商品详情</h1><br><br><br>
-      <el-image v-for="url in srcList" :key="url" :src="url" lazy></el-image>
+      <el-image v-for="url in srcList" :key="url" :src="url"></el-image>
     </div>
   </div>
 
@@ -70,8 +69,8 @@
           return {
             num: 1,
             value: 3.7,
-            money:10.00,
-            prize:10.00,
+            money:5999.00,
+            prize:5999.00,
             sum:65,
             goodsId:'0',
             //隐形窗口
@@ -84,13 +83,9 @@
             err_can_press : true,
 
             //商品详情
-            imgUrl: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg',
+            imgUrl: 'https://img13.360buyimg.com/n1/jfs/t1/127138/40/16031/89209/5f918b53E19746496/f0f235be5150056f.jpg',
             srcList: [
-              'https://fuss10.elemecdn.com/8/27/f01c15bb73e1ef3793e64e6b7bbccjpeg.jpeg',
-              'https://fuss10.elemecdn.com/8/27/f01c15bb73e1ef3793e64e6b7bbccjpeg.jpeg',
-              'https://fuss10.elemecdn.com/8/27/f01c15bb73e1ef3793e64e6b7bbccjpeg.jpeg',
-              'https://fuss10.elemecdn.com/8/27/f01c15bb73e1ef3793e64e6b7bbccjpeg.jpeg',
-              'https://fuss10.elemecdn.com/1/8e/aeffeb4de74e2fde4bd74fc7b4486jpeg.jpeg'
+              'http://img20.360buyimg.com/vc/jfs/t1/105367/36/17413/3696469/5e85c8d5E2e1acf66/0d3545ec70f2646f.jpg',
             ],goodsLikesList:[
               {id:1,name:"Iphone XS Max", img:"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1296012258,3994659249&fm=26&gp=0.jpg",prize:"10.00",desc:"苹果官方旗舰店"},
               {id:2,name:"Iphone XS Max", img:"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=373013405,916647179&fm=11&gp=0.jpg",prize:"10.00",desc:"苹果官方旗舰店"},

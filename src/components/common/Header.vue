@@ -2,10 +2,15 @@
   <div class="header">
     <!-- 前往主页按钮 -->
     <router-link to="/" style="color: #F2F8FE">
-      <div class="collapse-btn">
-        <i class="el-icon-s-home"></i>
+
+      <div class="logo" style="position: absolute;">
+        <div class="collapse-btn">
+          <i class="el-icon-s-home"></i>
+        </div>
+        <img style="width: 70px;height: 50px;margin-top: 10px;" src="../../assets/img/logo.png">
       </div>
-      <div class="logo">HelloMall</div>
+<!--      <div class="logo"><img src="../../assets/img/logo.png"></div>-->
+
     </router-link>
 
     <div class="header-right">
@@ -58,8 +63,9 @@
             <router-link to="/myOrders"><el-dropdown-item>我的订单</el-dropdown-item> </router-link>
             <router-link to="/userInfo"><el-dropdown-item>我的信息</el-dropdown-item> </router-link>
             <router-link to="/addressMag"><el-dropdown-item>地址管理</el-dropdown-item> </router-link>
-            <a href=""><el-dropdown-item divided command="loginout">Git仓库</el-dropdown-item> </a>
-            <el-dropdown-item>退出登录</el-dropdown-item>
+            <a href="https://github.com/zengxiaochao/hello-mall"><el-dropdown-item>Git仓库</el-dropdown-item> </a>
+            <el-dropdown-item divided command="loginout">退出登录</el-dropdown-item>
+<!--            <el-dropdown-item>退出登录</el-dropdown-item>-->
           </el-dropdown-menu>
         </el-dropdown>
       </div>
@@ -74,15 +80,15 @@
           <span style="font-size: 22px;">订单已发货</span>
           <el-button style="float: right; padding: 3px 0" type="text">已读</el-button>
         </div>
-        <span style="font-size: 18px;">asd</span>
+        <span style="font-size: 18px;">您购买的【华为P30 Pro】卖家已在【2020-10-23 13:22】于【广东】发货</span>
       </el-card>
 
       <el-card class="box-card" style="margin-top: 20px;text-align: center;">
         <div slot="header" class="clearfix">
-          <span style="font-size: 22px;">订单已发货</span>
+          <span style="font-size: 22px;">收藏已到货</span>
           <el-button style="float: right; padding: 3px 0" type="text">已读</el-button>
         </div>
-        <span style="font-size: 18px;">asd</span>
+        <span style="font-size: 18px;">您收藏的【iphone XS Max 256G】库存更新</span>
       </el-card>
 
     </el-drawer>
@@ -94,7 +100,7 @@
       return {
         collapse: false,
         fullscreen: false,
-        name: 'linxin',
+        name: '金刚葫芦娃',
         message: 2,
         drawer: false,
       };
